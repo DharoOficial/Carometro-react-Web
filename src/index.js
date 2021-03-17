@@ -8,6 +8,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Dashboard from './pages/dashboard';
 import BuscarRg from './pages/buscarRg'
 import cadastroAluno from './pages/cadastroAluno'
+import CreateAccount from './pages/admin/cadastrarAdmin';
+import Login from './pages/admin/login';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,6 +21,8 @@ ReactDOM.render((
             <Route path="/" exact={true} component={Dashboard} />
             <Route path="/buscarRg" component={BuscarRg} />
             <Route path="/cadastroAluno" component={cadastroAluno} />
+            <Route path="/cadastroAdmin" component={CreateAccount} />
+            <Route path="/login" component={Login} />
         </Switch>
     </ BrowserRouter>
 ), document.getElementById('root'));
