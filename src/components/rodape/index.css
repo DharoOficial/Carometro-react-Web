@@ -1,0 +1,51 @@
+footer{
+    background-color: #478DD2;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    display: flex;
+}
+.containerrodape {
+    width: 80%;
+    margin: auto;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;    
+}
+
+.linkrodape{
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+    padding-top: 8px;
+    width: 80px;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.linkrodape:hover{
+    
+    color: #fff ;
+    text-shadow: aliceblue;
+    transition: .4s all ease-in-out;
+    text-decoration: none;
+}
+
+.links{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.direitosautorais{
+    text-align: center;
+    border-top: inset #000;
+}
+.logorodape{
+    width: 150px;
+    height: 130px;
+}
