@@ -18,7 +18,6 @@ import { Form } from "react-bootstrap";
 
         },
         onSubmit : values => { 
-            alert(JSON.stringify(values));
             loginUsuario
                 .logar(values)
                 .then(resultado => resultado.json())
@@ -30,7 +29,7 @@ import { Form } from "react-bootstrap";
                         //salva token no localstorage
                         localStorage.setItem('token-carometro', resultado.data.token);
                         //redireciona página admin
-                        history.push('/');
+                        history.push('/dashboard');
                     } else {
 
                         alert(resultado.mensagem)

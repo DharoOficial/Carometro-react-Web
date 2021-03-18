@@ -32,7 +32,7 @@ import { Form } from "react-bootstrap";
                       //apresenta a notificação
                         alert(resultado.mensagem)
                         //redireciona página admin
-                        history.push('/login');
+                        history.push('/');
                     } else {
 
                         alert(resultado.mensagem)

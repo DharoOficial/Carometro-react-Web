@@ -18,7 +18,8 @@ const BuscarRg = () => {
         BuscarSevico
             .BuscaroRg()
             .then(resultado => {
-                //console.log(`resultado ${JSON.stringify(resultado.data)}`);
+                console.log('dwadw')
+                console.log(`resultado ${JSON.stringify(resultado.data)}`);
                 setAlunoRg(resultado.data.data);
             })
             .catch(erro => {
@@ -45,12 +46,12 @@ const BuscarRg = () => {
 
                         alunos.push(alunoRg[o])
                         formik.resetForm();
-                    } else{
+                    } else {
                         setAchou('achou')
                     }
                 }
 
-                if(achou === 'achou'){
+                if (achou === 'achou') {
                     alert('nenhum usuario foi encotrado')
                 }
 
@@ -70,23 +71,24 @@ const BuscarRg = () => {
     return (
         <div>
             <Menu />
-            <div className="container ">
+            <div className="container123 ">
                 <div className="buscaralorgshadow">
-                    <Form onSubmit={formik.handleSubmit} >
+                    <Form onSubmit={formik.handleSubmit} className="BuscarRgForm" >
 
 
-                        <Form.Group >
-                            <Form.Label>Digite o RG do aluno para buscar o Aluno</Form.Label>
+                        <Form.Group  >
+                            <Form.Label style={{fontSize : '2em'}}>Digite o RG do aluno para buscar o Aluno</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="Rg"
+                                style={{width : '1350px'}}
                                 placeholder="Digite o RG aqui"
                                 value={formik.values.Rg}
                                 onChange={formik.handleChange}
                             />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit"  >
+                        <Button variant="primary" type="submit" style={{width: '200px', margin: 'auto'}} >
                             Buscar
                         </Button>
 

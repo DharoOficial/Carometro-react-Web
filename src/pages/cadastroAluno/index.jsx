@@ -41,6 +41,7 @@ const CadastroAluno = () => {
             cpf: '',
             fotoAluno: '',
             buscRg: '',
+            datanascimento: '',
         },
         onSubmit: values => {
             console.log(values);
@@ -55,13 +56,15 @@ const CadastroAluno = () => {
     return (
         <div>
             <Menu />
-            <div className="container ">
-                <h1 style={{ marginTop: '2em' }}>Cadastro Aluno</h1>
-                <Form onSubmit={formik.handleSubmit} className="formdecadastroaluno" >
+            <div className="container123" >
 
-                    <Form.Group>
-                        <Form.Label>Buscar por Rg</Form.Label>
-                        <p>IMPORTANT: caso você deseje atualizar algum Aluno, insira seu RG.<br /> Caso deseje cadastrar Algum aluno, nao insira nada neste campo</p>
+
+                <h1 style={{ paddingTop: '2em', margin: 'auto' }}>Cadastro Aluno</h1>
+                <p style={{margin: 'auto'}}>IMPORTANT: caso você deseje atualizar algum Aluno, insira seu RG.<br /> Caso deseje cadastrar Algum aluno, nao insira nada neste campo</p>
+                <Form onSubmit={formik.handleSubmit} className="formDeCadastroAluno" >
+
+                    <Form.Group >
+                        <Form.Label style={{ fontSize: '1.5em' }}>Buscar por Rg</Form.Label>
                         <Form.Control
                             style={{ marginBottom: '4em' }}
                             type="text"
@@ -71,8 +74,9 @@ const CadastroAluno = () => {
                             placeholder="Buscar Usuario" />
                     </Form.Group>
 
+
                     <Form.Group>
-                        <Form.Label>Nome Usuario</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Nome Usuario</Form.Label>
                         <Form.Control
                             type="text"
                             name="nomeUsuario"
@@ -82,7 +86,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Email</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Email</Form.Label>
                         <Form.Control
                             type="email"
                             name="email"
@@ -92,7 +96,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Senha</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Senha</Form.Label>
                         <Form.Control
                             type="text"
                             name="senha"
@@ -102,7 +106,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Telefone</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Telefone</Form.Label>
                         <Form.Control
                             type="text"
                             name="telefone"
@@ -112,7 +116,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>RG</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >RG</Form.Label>
                         <Form.Control
                             type="text"
                             name="rg"
@@ -122,7 +126,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>CPF</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >CPF</Form.Label>
                         <Form.Control
                             type="text"
                             name="cpf"
@@ -132,7 +136,7 @@ const CadastroAluno = () => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Foto Aluno</Form.Label>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Foto Aluno</Form.Label>
                         <Form.Control
                             type="text"
                             name="fotoAluno"
@@ -141,7 +145,17 @@ const CadastroAluno = () => {
                             placeholder="Foto Aluno" />
                     </Form.Group>
 
-                    <Button variant="success" type="submit" className="botaodecadastroaluno" >
+                    <Form.Group>
+                        <Form.Label style={{ fontSize: '1.5em' }} >Data Nascimento</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="datanascimento"
+                            value={formik.values.datanascimento}
+                            onChange={formik.handleChange}
+                            placeholder="Data Nascimento" />
+                    </Form.Group>
+
+                    <Button variant="success" type="submit" className="BotaoCadastroAluno" >
                         Cadastrar
                     </Button>
 

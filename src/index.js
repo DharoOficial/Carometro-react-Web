@@ -18,11 +18,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render((
   <BrowserRouter>
         <Switch>
-            <Route path="/" exact={true} component={Dashboard} />
+            <Route path="/dashboard"  component={Dashboard} />
             <Route path="/buscarRg" component={BuscarRg} />
             <Route path="/cadastroAluno" component={cadastroAluno} />
             <Route path="/cadastroAdmin" component={CreateAccount} />
-            <Route path="/login" component={Login} />
+            <Route path="/"exact={true} component={Login} />
         </Switch>
     </ BrowserRouter>
 ), document.getElementById('root'));
