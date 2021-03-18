@@ -22,7 +22,6 @@ import { Form } from "react-bootstrap";
 
         },
         onSubmit : values => { 
-            alert(JSON.stringify(values));
             contaServico
                 .cadastrarAdmin(values)
                 .then(resultado => resultado.json())

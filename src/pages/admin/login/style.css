@@ -33,7 +33,7 @@ dark yellow: rgba(247, 155, 12)
   
   .wrapper-img {
     height: 55vh;
-    background: url(../../../Assets/Carometro.jpg) no-repeat center;
+    background: url(../../../assets/Carometro.jpg) no-repeat center;
     background-size: cover;
   }
   
@@ -45,7 +45,7 @@ dark yellow: rgba(247, 155, 12)
   }
   
   .logo-img {
-    background: url(../../../Assets/logo.jpg) no-repeat center;
+    background: url(../../../assets/logo.jpg) no-repeat center;
     height: 8vh;
     padding-top: 2rem;
   }

@@ -22,7 +22,7 @@ const CadastroAluno = () => {
             .cadastrar(values)
             .then(resultado => {
                 console.log(JSON.stringify(resultado))
-                if (resultado === true) {
+                if (resultado.data.sucesso === true) {
                     alert('usuario cadastrado')
                 } else {
                     alert('dados invalidos')
@@ -33,7 +33,7 @@ const CadastroAluno = () => {
 
     const formik = useFormik({
         initialValues: {
-            nomeUsuario: '',
+            nome: '',
             email: '',
             senha: '',
             telefone: '',
@@ -41,15 +41,10 @@ const CadastroAluno = () => {
             cpf: '',
             fotoAluno: '',
             buscRg: '',
-            datanascimento: '',
         },
         onSubmit: values => {
-            console.log(values);
-            if (values.buscRg === '') {
-                Cadastrar(values)
-            } else {
-                alterar(values);
-            }
+            Cadastrar(values)
+            formik.resetForm();
         }
     })
 
@@ -58,31 +53,18 @@ const CadastroAluno = () => {
             <Menu />
             <div className="container123" >
 
-
                 <h1 style={{ paddingTop: '2em', margin: 'auto' }}>Cadastro Aluno</h1>
-                <p style={{margin: 'auto'}}>IMPORTANT: caso você deseje atualizar algum Aluno, insira seu RG.<br /> Caso deseje cadastrar Algum aluno, nao insira nada neste campo</p>
+
                 <Form onSubmit={formik.handleSubmit} className="formDeCadastroAluno" >
-
-                    <Form.Group >
-                        <Form.Label style={{ fontSize: '1.5em' }}>Buscar por Rg</Form.Label>
-                        <Form.Control
-                            style={{ marginBottom: '4em' }}
-                            type="text"
-                            name="buscRg"
-                            value={formik.values.buscRg}
-                            onChange={formik.handleChange}
-                            placeholder="Buscar Usuario" />
-                    </Form.Group>
-
 
                     <Form.Group>
                         <Form.Label style={{ fontSize: '1.5em' }} >Nome Usuario</Form.Label>
                         <Form.Control
                             type="text"
-                            name="nomeUsuario"
-                            value={formik.values.nomeUsuario}
+                            name="nome"
+                            value={formik.values.nome}
                             onChange={formik.handleChange}
-                            placeholder="Nome Usuario" />
+                            placeholder="nome" />
                     </Form.Group>
 
                     <Form.Group>
@@ -145,19 +127,11 @@ const CadastroAluno = () => {
                             placeholder="Foto Aluno" />
                     </Form.Group>
 
-                    <Form.Group>
-                        <Form.Label style={{ fontSize: '1.5em' }} >Data Nascimento</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="datanascimento"
-                            value={formik.values.datanascimento}
-                            onChange={formik.handleChange}
-                            placeholder="Data Nascimento" />
-                    </Form.Group>
 
                     <Button variant="success" type="submit" className="BotaoCadastroAluno" >
                         Cadastrar
                     </Button>
+                   
 
                 </Form>
             </div>

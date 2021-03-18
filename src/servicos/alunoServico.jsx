@@ -12,10 +12,7 @@ const listar = dados => {
 
 //https://192.168.15.11:5001/v1/student
 const cadastrar = dados => {
-    alert('etrou cadastrar')
-    console.log(localStorage.getItem('token-carometro'))
-    return http.post('student/signup', {
-        body: JSON.stringify(dados),
+    return http.post('student/signup',  JSON.stringify(dados),{
         headers: {
             'authorization': `Bearer ${localStorage.getItem('token-carometro')}`,
         },

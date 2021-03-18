@@ -9,7 +9,7 @@ const Menu = () => {
         <header >
             <div className="containercabecalho">
                 <div className="cabecalho">
-                    <a href='/' className="tituloMenu">{title}</a>
+                    <a href='/dashboard' className="tituloMenu">{title}</a>
                     <nav className="linkscabecalho">
                         <a href="" className="linkcabecalho">Instituição</a>
                         <div className='buscarRG'>

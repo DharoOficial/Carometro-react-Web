@@ -49,7 +49,7 @@ const Dashboard = () => {
             <section className="navegacao">
 
                 <div className="card">
-                    <a href="" className="likcard" >Aluno</a>
+                    <a href="/cadastroAluno" className="likcard" >Aluno</a>
                     <img src="https://img.freepik.com/vetores-gratis/professora-e-alunos-com-mascaras-protetoras-em-seus-rostos-meninos-e-meninas
                     -vestidos-de-uniforme-escolar-e-professora-apontando-para-personagens-de-desenhos-animados-do-quadro-negro_71593-507.jpg?size
                     =626&ext=jpg" alt="Alunos" className="imgCard" />

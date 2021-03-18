@@ -73,24 +73,35 @@ const BuscarRg = () => {
             <Menu />
             <div className="container123 ">
                 <div className="buscaralorgshadow">
-                    <Form onSubmit={formik.handleSubmit} className="BuscarRgForm" >
+                    <Form  className="BuscarRgForm" onSubmit={formik.handleSubmit} >
 
 
                         <Form.Group  >
-                            <Form.Label style={{fontSize : '2em'}}>Digite o RG do aluno para buscar o Aluno</Form.Label>
+                            <Form.Label style={{ fontSize: '2em' }}>Digite o RG do aluno para buscar o Aluno</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="Rg"
-                                style={{width : '1350px'}}
+                                style={{ width: '1350px' }}
                                 placeholder="Digite o RG aqui"
                                 value={formik.values.Rg}
                                 onChange={formik.handleChange}
                             />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" style={{width: '200px', margin: 'auto'}} >
+                        <Button 
+                        variant="primary" 
+                        type="submit" 
+                        style={{ width: '200px', margin: 'auto' }}  
+                        
+                        >
                             Buscar
                         </Button>
+
+                        <a href="/buscarRg">
+                            <Button variant="success" type="submit" className="BotaoCadastroAluno" >
+                                limpar
+                            </Button>
+                        </a>
 
                     </Form>
                 </div>
